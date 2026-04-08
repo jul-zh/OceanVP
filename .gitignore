@@ -6,3 +6,19 @@
 # Python
 **/__pycache__
 **/*.pkl
+# datasets
+data/
+
+# outputs
+work_dirs/
+logs/
+outputs/
+
+# checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# slurm
+slurm-*.out
+*.out

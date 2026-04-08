@@ -252,7 +252,7 @@ class BaseExperiment(object):
     def display_method_info(self):
         """Plot the basic infomation of supported methods"""
         T, C, H, W = self.args.in_shape
-        if self.args.method in ['cotere']:
+        if self.args.method in method_maps:
             input_dummy = torch.ones(1, self.args.pre_seq_length, C, H, W).to(self.device)
         else:
             raise ValueError(f'Invalid method name {self.args.method}')

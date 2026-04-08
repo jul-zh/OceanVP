@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH --partition=intel-a100-pci3
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --gres=gpu:a100:1
+#SBATCH --output=/home/yzhidkova/logs/my_baseline_sdelight_prob_10ep_%j.out
+
+docker-id nvidia/pytorch:22.12-py3 bash /home/yzhidkova/projects/OceanVP/run_inside_container_my_baseline_sdelight_prob_10ep.sh
