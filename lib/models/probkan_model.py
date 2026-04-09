@@ -87,7 +87,10 @@ class RBFKANHead(nn.Module):
         self.in_proj = nn.Conv2d(in_ch, hidden, kernel_size=1)
 
         # learnable centers and widths for each hidden unit
-        self.centers = nn.Parameter(torch.linspace(-2.0, 2.0, num_basis).view(1, hidden, num_basis, 1, 1))
+        base_centers = torch.linspace(-2.0, 2.0, num_basis).view(1, 1, num_basis, 1, 1)
+        base_centers = base_centers.repeat(1, hidden, 1, 1, 1)
+        
+        self.centers = nn.Parameter(base_centers)
         self.log_widths = nn.Parameter(torch.zeros(1, hidden, num_basis, 1, 1))
 
         self.out_weight = nn.Parameter(torch.randn(out_ch, hidden, num_basis) * 0.05)
