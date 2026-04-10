@@ -6,6 +6,7 @@ from .my_baseline_sdelight_prob import MY_BASELINE_SDELIGHT_PROB
 from .my_baseline_rbfkan_prob import MY_BASELINE_RBFKAN_PROB
 from .prob import PROB
 from .probkan  import PROBKAN
+from .probkan_v2 import PROBKAN_V2
 
 method_maps = {
     'cotere': COTERE,
@@ -16,6 +17,7 @@ method_maps = {
     'my_baseline_rbfkan_prob': MY_BASELINE_RBFKAN_PROB,
     'prob': PROB,
     'probkan': PROBKAN,
+    'probkan_v2': PROBKAN_V2,
 }
 
 __all__ = [
@@ -26,7 +28,8 @@ __all__ = [
     'MY_BASELINE_SDELIGHT_PROB',
     'MY_BASELINE_RBFKAN_PROB',
     'PROB',
-    'PROBKAN'
+    'PROBKAN',
+    'PROBKAN_V2'
 ]
 
 
