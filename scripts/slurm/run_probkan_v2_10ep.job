@@ -6,4 +6,4 @@
 #SBATCH --gres=gpu:a100:1
 #SBATCH --output=/home/yzhidkova/logs/probkan_v2_10ep.out
 
-docker-id nvidia/pytorch:22.12-py3 bash /home/yzhidkova/OceanVP/run_inside_container_probkan_v2_10ep.sh
+docker-id nvidia/pytorch:22.12-py3 bash /home/yzhidkova/projects/OceanVP/run_inside_container_probkan_v2_10ep.sh
