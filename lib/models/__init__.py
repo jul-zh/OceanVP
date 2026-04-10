@@ -9,6 +9,7 @@ from .my_ocean_baseline_sdelight_prob import MY_OCEAN_BASELINE_SDELIGHT_PROB
 from .my_ocean_baseline_rbfkan_prob import MY_OCEAN_BASELINE_RBFKAN_PROB
 from .prob_model import PROB_Model
 from .probkan_model import PROBKAN_Model
+from .probkan_v2_model import PROBKANV2_Model
 
 __all__ = [
     'COTERE_Model',
@@ -19,4 +20,5 @@ __all__ = [
     'MY_OCEAN_BASELINE_RBFKAN_PROB',
     'PROB_Model',
     'PROBKAN_Model',
+    'PROBKANV2_Model',
 ]
