@@ -105,13 +105,8 @@ class PROBKAN_V2(Base_method):
             runner._iter += 1
 
             if self.rank == 0:
-                log_buffer = (
-                    f"train probkan_v2 loss: {loss.item():.4f}"
-                    f" | nll: {stats['nll'].item():.4f}"
-                    f" | mse: {stats['mse'].item():.4f}"
-                    f" | sreg: {stats['sigma_reg'].item():.4f}"
-                    f" | data time: {data_time_m.avg:.4f}"
-                )
+                log_buffer = 'train probkan loss: {:.4f}'.format(loss.item())
+                log_buffer += ' | data time: {:.4f}'.format(data_time_m.avg)
                 train_pbar.set_description(log_buffer)
 
             end = time.time()
