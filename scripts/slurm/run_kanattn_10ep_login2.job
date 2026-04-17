@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --job-name=kanattn10
+#SBATCH --output=/home/yzhidkova/logs/kanattn_10ep_%j.out
+#SBATCH --error=/home/yzhidkova/logs/kanattn_10ep_%j.err
+
+#SBATCH --partition=intel-gpu
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=4
+#SBATCH --time=1-00:00:00
+
+echo "=== SLURM JOB START ==="
+hostname
+nvidia-smi
+
+docker-id nvidia/pytorch:22.12-py3 \
+    bash /home/yzhidkova/projects/OceanVP/scripts/bash/run_inside_container_kanattn_10ep.sh

@@ -1,0 +1,9 @@
+fvcore
+timm
+einops
+future
+hickle
+lpips
+netcdf4
+opencv-python
+xarray

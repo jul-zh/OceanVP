@@ -1,5 +1,6 @@
 import time
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 from timm.utils import AverageMeter
@@ -14,6 +15,7 @@ class MY_BASELINE_RBFKAN_PROB(Base_method):
         Base_method.__init__(self, args, device, steps_per_epoch)
         self.model = self._build_model(self.config)
         self.model_optim, self.scheduler, self.by_epoch = self._init_optimizer(steps_per_epoch)
+        self.criterion = nn.MSELoss()
 
     def _build_model(self, args):
         return MY_OCEAN_BASELINE_RBFKAN_PROB(**args).to(self.device)

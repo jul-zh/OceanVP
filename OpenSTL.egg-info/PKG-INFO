@@ -1,0 +1,186 @@
+Metadata-Version: 2.4
+Name: OpenSTL
+Version: 0.0.0
+Summary: OpenSTL: Open-source Toolbox for SpatioTemporal Predictive Learning
+Home-page: https://github.com/chengtan9907/OpenSTL
+Author: CAIRI Westlake University Contributors
+Author-email: lisiyuan@westlake.edu.com
+License: Apache License 2.0
+Keywords: spatiotemporal predictive learning,video prediction,unsupervised spatiotemporal learning
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dask
+Requires-Dist: decord
+Requires-Dist: future
+Requires-Dist: fvcore
+Requires-Dist: hickle
+Requires-Dist: lpips
+Requires-Dist: matplotlib
+Requires-Dist: nni
+Requires-Dist: netcdf4
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: scikit-image<=0.19.3
+Requires-Dist: six
+Requires-Dist: scikit-learn
+Requires-Dist: timm<=0.6.11,>=0.5.4
+Requires-Dist: tqdm
+Requires-Dist: xarray==0.19.0
+Provides-Extra: all
+Requires-Dist: basemap; extra == "all"
+Requires-Dist: geos; extra == "all"
+Requires-Dist: pyproj; extra == "all"
+Requires-Dist: tensorflow; extra == "all"
+Requires-Dist: dask; extra == "all"
+Requires-Dist: decord; extra == "all"
+Requires-Dist: future; extra == "all"
+Requires-Dist: fvcore; extra == "all"
+Requires-Dist: hickle; extra == "all"
+Requires-Dist: lpips; extra == "all"
+Requires-Dist: matplotlib; extra == "all"
+Requires-Dist: nni; extra == "all"
+Requires-Dist: netcdf4; extra == "all"
+Requires-Dist: numpy; extra == "all"
+Requires-Dist: opencv-python; extra == "all"
+Requires-Dist: packaging; extra == "all"
+Requires-Dist: pandas; extra == "all"
+Requires-Dist: scikit-image<=0.19.3; extra == "all"
+Requires-Dist: six; extra == "all"
+Requires-Dist: scikit-learn; extra == "all"
+Requires-Dist: timm<=0.6.11,>=0.5.4; extra == "all"
+Requires-Dist: tqdm; extra == "all"
+Requires-Dist: xarray==0.19.0; extra == "all"
+Requires-Dist: asynctest; extra == "all"
+Requires-Dist: codecov; extra == "all"
+Requires-Dist: flake8; extra == "all"
+Requires-Dist: isort; extra == "all"
+Requires-Dist: pytest; extra == "all"
+Requires-Dist: pytest-cov; extra == "all"
+Requires-Dist: pytest-runner; extra == "all"
+Requires-Dist: xdoctest>=0.10.0; extra == "all"
+Requires-Dist: yapf; extra == "all"
+Requires-Dist: kwarray; extra == "all"
+Provides-Extra: tests
+Requires-Dist: asynctest; extra == "tests"
+Requires-Dist: codecov; extra == "tests"
+Requires-Dist: flake8; extra == "tests"
+Requires-Dist: isort; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: pytest-runner; extra == "tests"
+Requires-Dist: xdoctest>=0.10.0; extra == "tests"
+Requires-Dist: yapf; extra == "tests"
+Requires-Dist: kwarray; extra == "tests"
+Provides-Extra: optional
+Requires-Dist: basemap; extra == "optional"
+Requires-Dist: geos; extra == "optional"
+Requires-Dist: pyproj; extra == "optional"
+Requires-Dist: tensorflow; extra == "optional"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+# OceanVP: A HYCOM based Benchmark Dataset and A Relational Spatiotemporal Predictive Network for Oceanic Variable Prediction
+
+This repo releases the data and code for the paper:
+
+- OceanVP: A HYCOM based Benchmark Dataset and A Relational Spatiotemporal Predictive Network for Oceanic Variable Prediction. (Ocean Engineering, 2024, DOI: [10.1016/j.oceaneng.2024.117748](https://doi.org/10.1016/j.oceaneng.2024.117748))
+
+## Overview
+
+OceanVP is a common benchmark dataset for studying the deep-learning-based methods for oceanic variable prediction tasks. The data source is derived from water temperature, velocity, and salinity elements in the HYCOM (Hybrid Coordinate Ocean Model) reanalysis data product from 1994 to 2015.
+
+<div align="center">
+  <img src="docs/static/overview.jpg" height="480px"/> 
+</div>
+
+The REL-STPN framework provides the benchmark method for the OceanVP dataset. It introduces and improves a collaborative ternary relation ([CoTeRe](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123510375.pdf), ECCV 2020,  [see more details](#citation)) method, aiming to learn and reason the internal relations from the oceanic variable data. On the OceanVP dataset, the benchmark method has achieved SOTA performance and fast model iterations on a single NVIDIA RTX 3090 GPU with a training duration of less than 4h and an inference speed of over 1000 FPS.
+
+<div align="center">
+  <img src="docs/static/framework.jpg" height="280px"/> 
+</div>
+
+The contents of this repo are organized as:
+* [**Updates**](#updates)
+* [**Dataset Download**](#dataset-download)
+* [**Preparation**](#preparation)
+* [**Getting Started**](#getting-started)
+* [**Model Zoo**](#model-zoo)
+* [**Visualization**](#visualization)
+* [**License**](#license)
+* [**Acknowledgement**](#acknowledgement)
+* [**Citation**](#citation)
+
+## Updates
+
+- [2024-06-20] The data and code for OceanVP are released.
+
+## Dataset Download
+The OceanVP dataset can be downloaded via the [Google Drive](https://drive.google.com/file/d/1AEnlUD0KRHbwEmKDlezWpwoQvEyX00jY/view?usp=drive_link) or [Baidu Netdisk](https://pan.baidu.com/s/1fu02GIgmConqov_VXEP97w?pwd=ovp1) links.
+
+## Preparation
+Please refer to the instructions in [PREPARATION.md](docs/PREPARATION.md) for installation and data preparation.
+
+## Getting Started
+Please refer to [GETTING_STARTED.md](docs/GETTING_STARTED.md) for running the benchmark method.
+
+## Model Zoo
+The models and results are provided in [MODEL_ZOO.md](docs/MODEL_ZOO.md).
+
+## Visualization
+The visualization results are provided in [VISUALIZATION.md](docs/VISUALIZATION.md).
+
+## License
+The data and code in this repo are released under the [Apache 2.0 license](LICENSE).
+
+## Acknowledgement
+Thanks for the works and their contributors of the following codebases and data products.
+
+- [zhenglab/cotere-net](https://github.com/zhenglab/cotere-net)
+- [chengtan9907/OpenSTL](https://github.com/chengtan9907/OpenSTL)
+- [HYCOM GOFS 3.1 Reanalysis Data](https://www.hycom.org/dataserver/gofs-3pt1/reanalysis)
+
+## Citation
+
+```
+@article{shi2024oceanvp,
+  title={OceanVP: A HYCOM based benchmark dataset and a relational spatiotemporal predictive network for oceanic variable prediction},
+  author={Shi, Zhensheng and Zheng, Haiyong and Dong, Junyu},
+  journal={Ocean Engineering},
+  volume={304},
+  pages={117748},
+  year={2024},
+  publisher={Elsevier}
+}
+
+@inproceedings{shi2020cotere,
+  title={CoTeRe-Net: Discovering collaborative ternary relations in videos},
+  author={Shi, Zhensheng and Guan, Cheng and Cao, Liangjie and Li, Qianqian and Liang, Ju and Gu, Zhaorui and Zheng, Haiyong and Zheng, Bing},
+  booktitle={European Conference on Computer Vision},
+  pages={379--396},
+  year={2020},
+  organization={Springer}
+}
+
+```

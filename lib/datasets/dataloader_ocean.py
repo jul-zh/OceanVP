@@ -194,10 +194,21 @@ class OceanHYCOMDataset(Dataset):
         # var = (var_raw * 2048 - np.square(zero_raw - mean_raw) * 644) / (2048 - 644)
         # std = np.sqrt(var)
 
-        mean = data.mean(axis=(0, 2, 3)).reshape(1, data.shape[1], 1, 1)
-        std = data.std(axis=(0, 2, 3)).reshape(1, data.shape[1], 1, 1)
+        # mean = data.mean(axis=(0, 2, 3)).reshape(1, data.shape[1], 1, 1)
+        # std = data.std(axis=(0, 2, 3)).reshape(1, data.shape[1], 1, 1)
         # mean = dataset.mean('time').mean(('lat', 'lon')).compute()[data_name].values
         # std = dataset.std('time').mean(('lat', 'lon')).compute()[data_name].values
+        # data = (data - mean) / std
+        local_mean = data.mean(axis=(0, 2, 3)).reshape(1, data.shape[1], 1, 1)
+        local_std = data.std(axis=(0, 2, 3)).reshape(1, data.shape[1], 1, 1)
+
+        if self.mean is None or self.std is None:
+            mean = local_mean
+            std = local_std
+        else:
+            mean = self.mean
+            std = self.std
+
         data = (data - mean) / std
 
         return data, mean, std
@@ -283,7 +294,7 @@ def load_data(batch_size,
                                      pin_memory=True, drop_last=True,
                                      num_workers=num_workers,
                                      distributed=distributed, use_prefetcher=use_prefetcher)
-    dataloader_vali = create_loader(test_set, # validation_set,
+    dataloader_vali = create_loader(vali_set,
                                     batch_size=val_batch_size,
                                     shuffle=False, is_training=False,
                                     pin_memory=True, drop_last=drop_last,

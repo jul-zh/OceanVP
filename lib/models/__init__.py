@@ -10,6 +10,19 @@ from .my_ocean_baseline_rbfkan_prob import MY_OCEAN_BASELINE_RBFKAN_PROB
 from .prob_model import PROB_Model
 from .probkan_model import PROBKAN_Model
 from .probkan_v2_model import PROBKANV2_Model
+from .kanattn_model import KANATTN_Model
+from .my_ocean_baseline_kanattn_rbf import MY_OCEAN_BASELINE_KANATTN_RBF
+from .my_ocean_baseline_kanattn_rbf_v2 import MY_OCEAN_BASELINE_KANATTN_RBF_V2
+from .my_ocean_baseline_kanhead_rbf import MY_OCEAN_BASELINE_KANHEAD_RBF
+from .my_ocean_baseline_kanhead_spline import MY_OCEAN_BASELINE_KANHEAD_SPLINE
+from .my_ocean_baseline_kanhead_rbf_residual import MY_OCEAN_BASELINE_KANHEAD_RBF_RESIDUAL
+from .my_ocean_baseline_kandecoder_gate_rbf import MY_OCEAN_BASELINE_KANDECODER_GATE_RBF
+from .my_ocean_baseline_kanskip_fusion_rbf import MY_OCEAN_BASELINE_KANSKIP_FUSION_RBF
+from .my_ocean_baseline_kanhead_spline_residual import MY_OCEAN_BASELINE_KANHEAD_SPLINE_RESIDUAL
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL
+from .my_ocean_baseline_strongenc import MY_OCEAN_BASELINE_STRONGENC
+from .my_ocean_baseline_strongenc_kanhead_rbf_residual import MY_OCEAN_BASELINE_STRONGENC_KANHEAD_RBF_RESIDUAL
+from .my_ocean_baseline_strongenc_sdelight_kanhead_rbf_residual import MY_OCEAN_BASELINE_STRONGENC_SDELIGHT_KANHEAD_RBF_RESIDUAL
 
 __all__ = [
     'COTERE_Model',
@@ -21,4 +34,18 @@ __all__ = [
     'PROB_Model',
     'PROBKAN_Model',
     'PROBKANV2_Model',
+    'KANATTN_Model',
+    'MY_OCEAN_BASELINE_KANATTN_RBF',
+    'MY_OCEAN_BASELINE_KANATTN_RBF_V2',
+    'MY_OCEAN_BASELINE_KANHEAD_RBF',
+    'MY_OCEAN_BASELINE_KANHEAD_SPLINE',
+    'MY_OCEAN_BASELINE_KANHEAD_RBF_RESIDUAL',
+    'MY_OCEAN_BASELINE_KANDECODER_GATE_RBF',
+    'MY_OCEAN_BASELINE_KANSKIP_FUSION_RBF',
+    'MY_OCEAN_BASELINE_KANHEAD_SPLINE_RESIDUAL',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL',
+    'MY_OCEAN_BASELINE_STRONGENC',
+    'MY_OCEAN_BASELINE_STRONGENC_KANHEAD_RBF_RESIDUAL',
+    'MY_OCEAN_BASELINE_STRONGENC_SDELIGHT_KANHEAD_RBF_RESIDUAL',
 ]
+

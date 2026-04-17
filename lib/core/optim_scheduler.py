@@ -1,15 +1,42 @@
 import json
 from torch import optim
 
-from timm.optim.adafactor import Adafactor
-from timm.optim.adahessian import Adahessian
-from timm.optim.adamp import AdamP
-from timm.optim.lookahead import Lookahead
-from timm.optim.nadam import Nadam
-from timm.optim.nvnovograd import NvNovoGrad
-from timm.optim.radam import RAdam
-from timm.optim.rmsprop_tf import RMSpropTF
-from timm.optim.sgdp import SGDP
+from torch.optim import NAdam, RAdam
+
+try:
+    from timm.optim.adafactor import Adafactor
+except ImportError:
+    Adafactor = None
+
+try:
+    from timm.optim.adahessian import Adahessian
+except ImportError:
+    Adahessian = None
+
+try:
+    from timm.optim.adamp import AdamP
+except ImportError:
+    AdamP = None
+
+try:
+    from timm.optim.lookahead import Lookahead
+except ImportError:
+    Lookahead = None
+
+try:
+    from timm.optim.nvnovograd import NvNovoGrad
+except ImportError:
+    NvNovoGrad = None
+
+try:
+    from timm.optim.rmsprop_tf import RMSpropTF
+except ImportError:
+    RMSpropTF = None
+
+try:
+    from timm.optim.sgdp import SGDP
+except ImportError:
+    SGDP = None
 
 from timm.scheduler.cosine_lr import CosineLRScheduler
 from timm.scheduler.multistep_lr import MultiStepLRScheduler
@@ -96,7 +123,7 @@ def get_optim_scheduler(args, epoch, model, steps_per_epoch):
     elif opt_lower == 'adamw':
         optimizer = optim.AdamW(parameters, **opt_args)
     elif opt_lower == 'nadam':
-        optimizer = Nadam(parameters, **opt_args)
+        optimizer = NAdam(parameters, **opt_args)
     elif opt_lower == 'radam':
         optimizer = RAdam(parameters, **opt_args)
     elif opt_lower == 'adamp':
