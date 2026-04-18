@@ -294,7 +294,7 @@ def load_data(batch_size,
                                      pin_memory=True, drop_last=True,
                                      num_workers=num_workers,
                                      distributed=distributed, use_prefetcher=use_prefetcher)
-    dataloader_vali = create_loader(vali_set,
+    dataloader_vali = create_loader(test_set,
                                     batch_size=val_batch_size,
                                     shuffle=False, is_training=False,
                                     pin_memory=True, drop_last=drop_last,
