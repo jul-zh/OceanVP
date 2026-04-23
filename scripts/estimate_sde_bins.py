@@ -61,10 +61,13 @@ def estimate_binned_sde(arr: np.ndarray, n_bins: int = 100, sample_step_t: int =
             diffusion2.append(None)
             continue
 
+        mu = float(np.mean(dxb))
+        var = float(np.mean((dxb - mu) ** 2))
+
         centers.append(float(np.mean(xb)))
         counts.append(int(xb.size))
-        drift.append(float(np.mean(dxb)))
-        diffusion2.append(float(np.mean(dxb ** 2)))
+        drift.append(mu)
+        diffusion2.append(var)
 
     return {
         "n_bins": int(n_bins),

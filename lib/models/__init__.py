@@ -24,6 +24,21 @@ from .my_ocean_baseline_strongenc import MY_OCEAN_BASELINE_STRONGENC
 from .my_ocean_baseline_strongenc_kanhead_rbf_residual import MY_OCEAN_BASELINE_STRONGENC_KANHEAD_RBF_RESIDUAL
 from .my_ocean_baseline_strongenc_sdelight_kanhead_rbf_residual import MY_OCEAN_BASELINE_STRONGENC_SDELIGHT_KANHEAD_RBF_RESIDUAL
 
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_perstep import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_PERSTEP
+
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_multikan import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_MULTIKAN
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_gatedkan import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_GATEDKAN
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_tempmix import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_TEMPMIX
+
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_stemplus import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_STEMPLUS
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_dilated import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_DILATED
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_skipgate import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_SKIPGATE
+
+from .my_ocean_baseline_uv import MY_OCEAN_BASELINE_UV
+from .my_ocean_baseline_kanhead_rbf_residual_uv import MY_OCEAN_BASELINE_KANHEAD_RBF_RESIDUAL_UV
+from .my_ocean_baseline_kanhead_spline_residual_uv import MY_OCEAN_BASELINE_KANHEAD_SPLINE_RESIDUAL_UV
+from .my_ocean_baseline_sdelight_kanhead_rbf_residual_uv import MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_UV
+
 __all__ = [
     'COTERE_Model',
     'MY_OCEAN_BASELINE',
@@ -47,5 +62,17 @@ __all__ = [
     'MY_OCEAN_BASELINE_STRONGENC',
     'MY_OCEAN_BASELINE_STRONGENC_KANHEAD_RBF_RESIDUAL',
     'MY_OCEAN_BASELINE_STRONGENC_SDELIGHT_KANHEAD_RBF_RESIDUAL',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_PERSTEP',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_MULTIKAN',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_GATEDKAN',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_TEMPMIX',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_STEMPLUS',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_DILATED',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_SKIPGATE',
+    'MY_OCEAN_BASELINE_UV',
+    'MY_OCEAN_BASELINE_KANHEAD_RBF_RESIDUAL_UV',
+    'MY_OCEAN_BASELINE_KANHEAD_SPLINE_RESIDUAL_UV',
+    'MY_OCEAN_BASELINE_SDELIGHT_KANHEAD_RBF_RESIDUAL_UV',
 ]
+
 

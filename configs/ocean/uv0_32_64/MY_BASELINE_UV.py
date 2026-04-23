@@ -1,7 +1,9 @@
-method = 'my_baseline_kanhead_spline_residual'
+method = 'my_baseline_uv'
 
+# model
 hid_S = 32
 
+# training
 lr = 5e-4
 batch_size = 16
 sched = 'cosine'

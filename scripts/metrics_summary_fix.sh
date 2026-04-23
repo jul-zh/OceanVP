@@ -21,6 +21,21 @@ patterns=(
   "mb_strongenc_kanhead_fix_50ep-*.out"
   "mb_strongenc_sdelight_kanhead_sdeloss_fix_10ep-*.out"
   "mb_strongenc_sdelight_kanhead_sdeloss_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeenergy_bins_fix_50ep-*.out"
+  "mb_kanhead_fix_50ep-*.out"
+  "mb_sdelight_kanhead_perstep_sdeloss_bins_v2_fix_10ep-*.out"
+  "mb_sdelight_kanhead_perstep_sdeloss_bins_v2_fix_50ep-*.out"
+  "mb_sdelight_kanhead_perstep_smooth_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_soft_v3_fix_10ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_fix_50ep_rerun-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_mixed_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_mixed03_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_horizon_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_smooth_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_wider_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_gamma2_fix_50ep-*.out"
+  "mb_sdelight_kanhead_rbf_residual_sdeloss_bins_huber_fix_50ep-*.out"
 )
 
 for pattern in "${patterns[@]}"; do
@@ -91,6 +106,51 @@ for pattern in "${patterns[@]}"; do
         ;;
       mb_strongenc_sdelight_kanhead_sdeloss_fix_50ep-*.out)
         short_name="strongenc_sdelight_kanhead_sdeloss_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_fix_50ep-*.out)
+        short_name="sdeloss_bins_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeenergy_bins_fix_50ep-*.out)
+        short_name="sdeenergy_bins_fix_50ep"
+        ;;
+      mb_kanhead_fix_50ep-*.out)
+        short_name="kanhead_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_perstep_sdeloss_bins_v2_fix_10ep-*.out)
+        short_name="kanhead_perstep_sdeloss_bins_v2_fix_10ep"
+        ;;
+      mb_sdelight_kanhead_perstep_sdeloss_bins_v2_fix_50ep-*.out)
+        short_name="kanhead_perstep_sdeloss_bins_v2_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_perstep_smooth_fix_50ep-*.out)
+        short_name="sdelight_kanhead_perstep_smooth_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_soft_v3_fix_10ep-*.out)
+        short_name="sdelight_kanhead_rbf_residual_sdeloss_soft_v3_fix_10ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_fix_50ep_rerun-*.out)
+        short_name="sdelight_kanhead_rbf_residual_sdeloss_bins_fix_50ep_rerun"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_mixed_fix_50ep-*.out)
+        short_name="sdelight_kanhead_rbf_residual_sdeloss_bins_mixed_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_mixed03_fix_50ep-*.out)
+        short_name="sdeloss_bins_mixed03_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_horizon_fix_50ep-*.out)
+        short_name="sdeloss_bins_horizon_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_smooth_fix_50ep-*.out)
+        short_name="sdeloss_bins_smooth_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_wider_fix_50ep-*.out)
+        short_name="sdeloss_bins_wider_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_gamma2_fix_50ep-*.out)
+        short_name="sdeloss_bins_gamma2_fix_50ep"
+        ;;
+      mb_sdelight_kanhead_rbf_residual_sdeloss_bins_huber_fix_50ep-*.out)
+        short_name="sdeloss_bins_huber_fix_50ep"
         ;;
    esac
 
